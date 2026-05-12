@@ -433,19 +433,17 @@ class ConfigurableSupportTriageAgent:
 
         context = f"Category: {category}\nExtracted info: {json.dumps(extracted_info, indent=2)}"
 
-        prompt = f"""
-        Generate a professional customer support response template for the following:
-        
-        {context}
-        
+        prompt = f"""Generate a professional customer support response template for the following:
+
+        {...}
+
         The response should:
         - Be polite and professional
         - Acknowledge the specific issue type
         - Include next steps or resolution process
         - Reference any extracted information appropriately
-        
-        Keep it concise but helpful.
-        """
+
+        Keep it concise but helpful."""
 
         self.traces.append(
             TraceEvent(
